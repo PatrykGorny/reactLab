@@ -26,7 +26,11 @@ function NavBarMenuApp() {
           alignItems: "center",
         }}
       >
-        <Navbar.Brand href="/" className="mx-auto">
+        <Navbar.Brand
+          href="/"
+          className="mx-auto"
+          style={{ flexGrow: 1, textAlign: "center" }}
+        >
           Frameworki frontendowe
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -38,6 +42,7 @@ function NavBarMenuApp() {
             <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/lab01">Laboratorium 1</Nav.Link>
             <Nav.Link href="/lab02">Laboratorium 2</Nav.Link>
+            <Nav.Link href="/lab03">Laboratorium 3</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </div>

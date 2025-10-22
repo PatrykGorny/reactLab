@@ -1,107 +1,107 @@
 export const people = [
 {
     id: 1,
-    name: "Martyna",
-    birthDate: "1983-12-04",
-    email: "martyna@wsei.edu.pl",
-    phone: "906-402-869"
+    name: "Patryk",
+    birthDate: "1985-03-23",
+    email: "patryk@wsei.edu.pl",
+    phone: "359-403-759"
 },
 {
     id: 2,
-    name: "Jakub",
-    birthDate: "2001-03-07",
-    email: "jakub@wsei.edu.pl",
-    phone: "980-394-627"
+    name: "Patryk",
+    birthDate: "2005-10-28",
+    email: "patryk2@wsei.edu.pl",
+    phone: "612-573-688"
 },
 {
     id: 3,
-    name: "Martyna",
-    birthDate: "1984-09-27",
-    email: "martyna2@wsei.edu.pl",
-    phone: "383-705-130"
+    name: "Ania",
+    birthDate: "1992-12-09",
+    email: "ania@wsei.edu.pl",
+    phone: "492-151-836"
 },
 {
     id: 4,
-    name: "Jan",
-    birthDate: "1997-01-05",
-    email: "jan@wsei.edu.pl",
-    phone: "528-348-910"
+    name: "Adam",
+    birthDate: "1997-12-10",
+    email: "adam@wsei.edu.pl",
+    phone: "333-256-860"
 },
 {
     id: 5,
-    name: "Ania",
-    birthDate: "2001-01-14",
-    email: "ania@wsei.edu.pl",
-    phone: "329-104-486"
+    name: "Michał",
+    birthDate: "2005-05-19",
+    email: "michał@wsei.edu.pl",
+    phone: "445-622-606"
 },
 {
     id: 6,
-    name: "Jakub",
-    birthDate: "1993-01-28",
-    email: "jakub2@wsei.edu.pl",
-    phone: "256-460-837"
+    name: "Adam",
+    birthDate: "1988-08-21",
+    email: "adam2@wsei.edu.pl",
+    phone: "388-951-594"
 },
 {
     id: 7,
     name: "Ania",
-    birthDate: "1991-06-05",
+    birthDate: "1984-12-15",
     email: "ania2@wsei.edu.pl",
-    phone: "517-357-670"
+    phone: "880-104-301"
 },
 {
     id: 8,
     name: "Ania",
-    birthDate: "1991-07-04",
+    birthDate: "1990-09-27",
     email: "ania3@wsei.edu.pl",
-    phone: "833-197-836"
+    phone: "356-672-615"
 },
 {
     id: 9,
-    name: "Jakub",
-    birthDate: "2004-05-17",
-    email: "jakub3@wsei.edu.pl",
-    phone: "873-606-357"
+    name: "Arek",
+    birthDate: "2004-11-22",
+    email: "arek@wsei.edu.pl",
+    phone: "351-330-443"
 },
 {
     id: 10,
-    name: "Martyna",
-    birthDate: "2002-07-17",
-    email: "martyna3@wsei.edu.pl",
-    phone: "522-222-505"
+    name: "Adam",
+    birthDate: "2000-03-16",
+    email: "adam3@wsei.edu.pl",
+    phone: "973-494-839"
 },
 {
     id: 11,
-    name: "Patryk",
-    birthDate: "1995-04-28",
-    email: "patryk@wsei.edu.pl",
-    phone: "224-268-966"
+    name: "Martyna",
+    birthDate: "1997-06-22",
+    email: "martyna@wsei.edu.pl",
+    phone: "503-282-131"
 },
 {
     id: 12,
-    name: "Michał",
-    birthDate: "1991-06-25",
-    email: "michał@wsei.edu.pl",
-    phone: "564-493-104"
+    name: "Ela",
+    birthDate: "1984-01-06",
+    email: "ela@wsei.edu.pl",
+    phone: "354-163-632"
 },
 {
     id: 13,
-    name: "Michał",
-    birthDate: "2005-10-13",
-    email: "michał2@wsei.edu.pl",
-    phone: "214-258-826"
+    name: "Arek",
+    birthDate: "1982-12-24",
+    email: "arek2@wsei.edu.pl",
+    phone: "784-498-768"
 },
 {
     id: 14,
-    name: "Jan",
-    birthDate: "1987-09-03",
-    email: "jan2@wsei.edu.pl",
-    phone: "399-139-738"
+    name: "Ela",
+    birthDate: "2001-09-05",
+    email: "ela2@wsei.edu.pl",
+    phone: "583-466-798"
 },
 {
     id: 15,
-    name: "Arek",
-    birthDate: "1991-08-27",
-    email: "arek@wsei.edu.pl",
-    phone: "996-541-989"
+    name: "Jakub",
+    birthDate: "2000-04-13",
+    email: "jakub@wsei.edu.pl",
+    phone: "883-333-408"
 }
 ];
