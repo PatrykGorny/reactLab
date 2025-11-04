@@ -1,4 +1,5 @@
 import { Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 function NavBarMenuApp() {
   return (
@@ -27,7 +28,8 @@ function NavBarMenuApp() {
         }}
       >
         <Navbar.Brand
-          href="/"
+          as={Link}
+          to="/"
           className="mx-auto"
           style={{ flexGrow: 1, textAlign: "center" }}
         >
@@ -39,10 +41,21 @@ function NavBarMenuApp() {
           style={{ justifyContent: "center" }}
         >
           <Nav className="mx-auto" style={{ gap: "1rem" }}>
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/lab01">Laboratorium 1</Nav.Link>
-            <Nav.Link href="/lab02">Laboratorium 2</Nav.Link>
-            <Nav.Link href="/lab03">Laboratorium 3</Nav.Link>
+            <Nav.Link as={Link} to="/home">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/lab01">
+              Laboratorium 1
+            </Nav.Link>
+            <Nav.Link as={Link} to="/lab02">
+              Laboratorium 2
+            </Nav.Link>
+            <Nav.Link as={Link} to="/lab03">
+              Laboratorium 3
+            </Nav.Link>
+            <Nav.Link as={Link} to="/lab04/add">
+              Laboratorium 4
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </div>

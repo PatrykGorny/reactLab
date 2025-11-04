@@ -1,13 +1,15 @@
-function ProfileGrid({ columns, children }) {
-  const colClass = `col-${12 / columns}`;
+import React from "react";
+
+function ProfileGrid({ columns = 3, children }) {
+  const colSize = Math.floor(12 / columns);
 
   return (
-    <div className="row g-4 justify-content-center w-auto mx-auto">
-      {children.map((child, idx) => (
-        <div className={colClass} key={idx}>
-          {child}
-        </div>
-      ))}
+    <div className="mt-4">
+      <div className="row g-2">
+        {React.Children.map(children, (child) => (
+          <div className={`col-${colSize}`}>{child}</div>
+        ))}
+      </div>
     </div>
   );
 }

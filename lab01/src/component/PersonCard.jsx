@@ -1,17 +1,27 @@
-import React from "react";
 import RatingBar from "./RatingBar";
+import { useContext } from "react";
+import AppContext from "../data/AppContext";
+import { useNavigate } from "react-router";
 
 function PersonCard(props) {
   const {
     id,
-    name,
-    email,
-    phone,
-    birthDate,
-    rating = 0,
-    checked = false,
-    dispatch,
+    rating: propRating = undefined,
+    checked: propChecked = undefined,
+    dispatch: propDispatch = undefined,
   } = props;
+
+  const context = useContext(AppContext);
+  const { items = [], dispatch: ctxDispatch } = context || {};
+  const item = items.find((it) => it.id === id) || {};
+  const isChecked =
+    typeof propChecked !== "undefined" ? propChecked : !!item.check;
+  const dispatch =
+    typeof propDispatch === "function" ? propDispatch : ctxDispatch;
+  const navigate = useNavigate();
+
+  const currentRate =
+    typeof propRating !== "undefined" ? propRating : item.rating || 0;
 
   return (
     <div
@@ -21,7 +31,7 @@ function PersonCard(props) {
         border: "1px solid #e0e0e0",
         borderRadius: "12px",
         transition: "all 0.3s ease",
-        backgroundColor: checked ? "#f8f9fa" : "#ffffff",
+        backgroundColor: isChecked ? "#f8f9fa" : "#ffffff",
         marginRight: "16px",
       }}
       onMouseEnter={(e) => {
@@ -57,14 +67,14 @@ function PersonCard(props) {
               paddingRight: "8px",
             }}
           >
-            {name}
+            {item.name}
           </h5>
 
           <div style={{ flex: "0 0 auto", marginLeft: "8px" }}>
             <input
               type="checkbox"
               id={`check-${id}`}
-              checked={!!checked}
+              checked={!!isChecked}
               onChange={() => dispatch && dispatch({ type: "check", id })}
               style={{
                 cursor: "pointer",
@@ -83,15 +93,24 @@ function PersonCard(props) {
             backgroundColor: "#f8f9fa",
             borderRadius: "8px",
             marginBottom: "16px",
+            marginTop: "16px",
           }}
         >
           <div style={{ display: "inline-block" }}>
-            <RatingBar rate={rating} />
+            <RatingBar rate={currentRate} />
           </div>
         </div>
 
-        <div className="d-flex justify-content-between">
-          <button className="btn btn-sm btn-outline-primary" onClick={() => {}}>
+        <div
+          className="d-flex justify-content-between"
+          style={{ marginTop: "16px" }}
+        >
+          <button
+            className="btn btn-sm btn-outline-primary"
+            onClick={() => {
+              navigate(`/lab04/edit/${id}`);
+            }}
+          >
             Edit
           </button>
 
@@ -104,7 +123,12 @@ function PersonCard(props) {
 
           <button
             className="btn btn-sm btn-outline-success"
-            onClick={() => dispatch && dispatch({ type: "rate", id })}
+            onClick={() => {
+              const newRate = currentRate < 10 ? currentRate + 1 : 0;
+              if (typeof dispatch === "function") {
+                dispatch({ type: "rate", id, value: newRate });
+              }
+            }}
           >
             Rate
           </button>
