@@ -8,7 +8,7 @@ function Lab01() {
       <ProfileGrid columns={3}>
         {people.map((person) => (
           <ProfileCard
-            key={person.email}
+            key={person.id}
             name={person.name}
             email={person.email}
             birthDate={person.birthDate}
