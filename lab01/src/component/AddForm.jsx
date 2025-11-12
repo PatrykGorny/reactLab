@@ -1,6 +1,6 @@
 import { Button, Container, Form, FormControl } from "react-bootstrap";
 import { useState, useContext } from "react";
-import AppContext from "../data/AppContext";
+import useDispatch from "../hooks/useDispatch";
 import { useNavigate } from "react-router-dom";
 
 const emailField = "email";
@@ -13,7 +13,7 @@ const photoField = "photo";
 function AddForm() {
   const [errors, setErrors] = useState([]);
   const [isSendig, setSending] = useState(false);
-  const { dispatch } = useContext(AppContext);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const onSubmitFunction = async (e) => {

@@ -1,7 +1,8 @@
 import RatingBar from "./RatingBar";
-import { useContext } from "react";
-import AppContext from "../data/AppContext";
+
 import { useNavigate } from "react-router";
+import useData from "../hooks/useData";
+import useDispatch from "../hooks/useDispatch";
 
 function PersonCard(props) {
   const {
@@ -10,9 +11,8 @@ function PersonCard(props) {
     checked: propChecked = undefined,
     dispatch: propDispatch = undefined,
   } = props;
-
-  const context = useContext(AppContext);
-  const { items = [], dispatch: ctxDispatch } = context || {};
+  const items = useData();
+  const ctxDispatch = useDispatch();
   const item = items.find((it) => it.id === id) || {};
   const isChecked =
     typeof propChecked !== "undefined" ? propChecked : !!item.check;

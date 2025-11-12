@@ -1,10 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { useContext } from "react";
-import AppContext from "../data/AppContext";
+import useData from "../hooks/useData";
 
 function MyContainer({ element: Element, data }) {
-  const context = useContext(AppContext);
-  const state = data ?? context.items ?? [];
+  const items = useData();
+  const state = data ?? items ?? [];
 
   return (
     <Container>

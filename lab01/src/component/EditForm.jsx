@@ -1,13 +1,15 @@
 import { Button, Form, FormControl, Card } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router";
-import AppContext from "../data/AppContext";
+import useData from "../hooks/useData";
+import useDispatch from "../hooks/useDispatch";
 
 function EditForm() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { items, dispatch } = useContext(AppContext);
+  const items = useData();
+  const dispatch = useDispatch();
 
   const itemId = Number(id);
   const item = items ? items.find((i) => i.id === itemId) : null;
